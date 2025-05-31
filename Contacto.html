@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&ZPAINTING</title>
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="ArchivozCss/Estilos.css">
+    <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
+    <link rel="stylesheet" href="ArchivozCss/EstiloContacto.css">
+    <link rel="stylesheet" href="ArchivozCss/QuienesSomos.css">
+    <!-- Agrega Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--scripts js-->
+    
+    <!--icono-->
+     <!--icono-->
+    <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- Menú de navegación -->
+        <nav class="navbar navbar-expand-lg" style="background-color: white;">
+            <div class="container-fluid">
+                <div id="nombreEmpresa">
+                    <a href="Index.html"> 
+                        <img src="RecursosVisuales/logo1.png" alt="Logo de L & Z Painting" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <div id="BotonInicio">
+                                <a class="nav-link btn-inicio" href="Index.html">Home</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="BotonServicios">
+                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
+                            </div>
+                        </li>
+                        <div id="BotonGaleria">
+                            <li class="nav-item">
+                                <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="BotonContacto">
+                                <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                </div>
+            </div>
+        </nav>
+
+        <h2>Contact Us</h2>
+        <div class="Formulario">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Questions / Description:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+
+         
+        
+            <div id="responseMessage"></div>
+        </div>
+    </header>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/12066362658" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
+        
+    </div>
+    
+                  <h2 style="text-align: center;">Areas We Cover</h2>
+<div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5377.143940775814!2d-122.13792!3d47.634451!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906d0bcf3bc01b%3A0x9a9560a6dbe0bc9b!2s2731%20152nd%20Ave%20NE%2C%20Redmond%2C%20WA%2098052%2C%20EE.%20UU.!5e0!3m2!1ses!2ssv!4v1742015116383!5m2!1ses!2ssv" 
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+       
+    
+
+       <!-- Pie de página -->
+      <footer>
+        <p>&copy; R.M(diseños) 2025. All rights reserved.</p>
+        <p>Designer’s Contact Info</p>
+        <div id="Contactos">
+            <div class="iconoRedSocial">
+                <div class="whatsapp-container"> 
+                    <img src="RecursosVisuales/WHATSAPP.png" alt="WhatsApp"> 
+                    <div class="whatsapp-number">+503 7162 5404</div> 
+                </div>
+            </div>
+           
+            
+        </div>
+    </footer>   
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="ArchivozJS/ContactoFetch.js"></script>
+   
+    
+</body>
+</html>

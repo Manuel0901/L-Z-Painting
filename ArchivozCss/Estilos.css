@@ -1,0 +1,622 @@
+    /* General */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+    /* Estilos generales */
+.header {
+ 
+    padding: 10px; /* Reduce el espacio dentro del encabezado */
+    margin: 0; /* Elimina márgenes externos */
+    margin-bottom: 5px;
+}
+
+
+
+.header img {
+    max-width: 100%; /* Ajusta el tamaño del logo a la pantalla */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-bottom: 5px;
+    padding: 10px; 
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 5px; /* Menos espacio debajo del encabezado */
+    }
+    .navbar-nav .nav-link {
+        margin: 5px auto; /* Reduce el espacio entre botones */
+    }
+    body {
+        padding: 2px; /* Reduce el espacio general en los bordes */
+    }
+}
+
+.navbar-toggler {
+    margin-top: 25px; /* Margen superior para mover hacia abajo */
+}
+
+
+
+
+    #botonInicio .nav-link,
+    #botonServicios .nav-link,
+    #botonGaleria .nav-link,
+    #botonContacto .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+        padding: 10px 20px; /* Relleno para que se vea como un botón */
+        border-radius: 5px; /* Bordes redondeados */
+        color: #ffffff; /* Color de texto blanco */
+        transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    }
+        
+
+
+    /* Colores de fondo específicos para móviles */
+    #botonInicio .nav-link {
+        background-color: #f1be49; /* Color de fondo */
+        hover:rgb(57, 161, 71);
+    }
+
+    #botonServicios .nav-link {
+        background-color: #317039; /* Color de fondo */
+        hover:rgb(57, 161, 71);
+    }
+
+    #botonGaleria .nav-link {
+        background-color: rgb(255, 51, 0); /* Color de fondo */
+    }
+
+    #botonContacto .nav-link {
+        background-color: #f1be49; /* Color de fondo */
+    }
+
+
+
+   
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    #nombreEmpresa {
+        position: relative; /* Mantener como 'relative' */
+        color: black;
+        padding: 10px; /* Mantener el padding */
+        z-index: 1000;
+        font-size: 20px; /* Tamaño de fuente ajustado */
+        background-color: white; /* Fondo blanco */
+        transform: translateX(73px); /* Mueve el logo más a la derecha */
+    }
+}
+
+
+    /*configuraciones ´para el nav-bar*/
+
+.navbar {
+    background-color: white;
+}
+/* Estilos para el navbar */
+.navbar {
+    margin-bottom: 20px; /* Añade separación inferior */
+}
+
+/* Estilo para el logo en el navbar */
+#nombreEmpresa img {
+    max-width: 100%; /* Asegura que el logo sea responsivo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+/* Asegúrate de que el navbar siempre esté encima */
+.navbar {
+    position: relative; /* Cambia a fixed si quieres que siempre esté en la parte superior de la página al hacer scroll */
+    z-index: 10; /* Un valor alto para asegurarse de que esté sobre otros elementos */
+}
+
+/* mantiene la barra superior fija mientras se scrolea */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed; /* Fija la barra en la parte superior de la pantalla */
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        top: 0;
+    }
+
+}
+
+
+    .empresa {
+        font-size: 2.5em; /* Tamaño de fuente grande */
+        font-weight: bold; /* Negrita */
+        color: black; /* Color blanco (o el que desees) */
+        margin: 0; /* Elimina márgenes */
+    }
+    /* Contenedor del logo y nombre de la empresa */
+
+
+    #nombreEmpresa {
+        display: flex; /* Aplica flex al contenedor */
+        align-items: center; /* Centra verticalmente los elementos en el contenedor */
+        justify-content: flex-end; /* Alinea la imagen a la derecha */
+    }
+    
+    #nombreEmpresa img {
+       max-width: 200px; 
+        height: 100%; /* Mantiene la proporción de la imagen */
+    }
+    
+    /* Estilo para vista móvil */
+    @media (max-width: 768px) {
+        #nombreEmpresa {
+            justify-content: center; /* Centra horizontalmente en vista móvil */
+            max-width: 150px;
+            width: 100%;
+        }
+    }
+    
+    
+    /* Estilo del texto de descripción */
+    .descripcion {
+        font-size: 14px;
+        color: #555; /* Color del texto */
+        margin-left: 10px;
+        text-align: center;
+    }
+
+
+    .subtitulo {
+        font-size: 1.5em; /* Tamaño de fuente mediano */
+        font-weight: normal; /* Peso normal */
+        color: black; /* Un color diferente */
+        margin: 0; /* Elimina márgenes */
+        margin-left:100px; /* Espacio a la izquierda */
+    }
+
+    .descripcion {
+        font-size: 1em; /* Tamaño de fuente pequeño */
+        font-weight: normal; /* Peso normal */
+        color:black; /* Color blanco (o el que desees) */
+        margin-top: 5px; /* Espacio arriba */
+    }
+
+
+    /* Estilos para pantallas móviles */
+    @media (max-width: 768px) {
+        /* Alineación del botón de menú a la derecha */
+        .navbar-toggler {
+            position: absolute; /* Posición absoluta para moverlo */
+            right: 20px; /* Ajusta la distancia desde la derecha */
+            top: 15px; /* Ajusta la distancia desde la parte superior */
+        }
+
+        #botonInicio .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonServicios .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonGaleria .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonContacto .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+    }
+    /* Configuración para el contenedor de la navegación */
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+/* Configuración para botones individuales */
+#BotonInicio .nav-link,
+#BotonServicios .nav-link,
+#BotonGaleria .nav-link,
+#BotonContacto .nav-link {
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px 0; /* Espacio vertical entre botones */
+    width: 120px; /* Ajusta el ancho según tus necesidades */
+    height: 40px; /* Ajusta la altura según tus necesidades */
+    display: flex; /* Para centrar el texto dentro del botón */
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+}
+
+/* Estilos para el botón de Inicio */
+#BotonInicio .nav-link{
+    background-color: #f1be49;
+    margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(244, 211, 94, 0.6); /* Sombra con tono amarillo, más difuminada */
+}
+
+/* Estilos para el botón de Servicios */
+#BotonServicios .nav-link {
+    background-color: #317039;
+    margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(49, 112, 57, 0.6); /* Sombra con tono verde, más difuminada */
+}
+
+/* Estilos para el botón de Galería */
+#BotonGaleria .nav-link {
+    background-color: #db4b09;
+    margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(219, 75, 9, 0.6); /* Sombra con tono naranja, más difuminada */
+}
+
+/* Estilos para el botón de Contacto */
+#BotonContacto .nav-link {
+    background-color: #f1be49;
+    margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(244, 211, 94, 0.6); /* Sombra con tono amarillo, más difuminada */
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Asegura que los botones estén en columna */
+    }
+}
+
+
+    /* Estilo de la barra de menú */
+.navbar {
+    position: relative; /* Asegúrate de que la barra de menú tenga un contexto de apilamiento */
+    z-index: 1000; /* Valor alto para mantener la barra de menú en la parte superior */
+}
+/*agregado*/
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra los botones verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para los botones */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    /* Color de los íconos de navegación del carrusel */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #317039; /* Cambia el color de la flecha a blanco */
+        border-radius: 50%;
+        padding: 0%;
+        padding: 20px 0;
+        margin-bottom: 200;
+    }
+    /*agregado nuevo*/
+    .carousel-wrapper {
+        display: flex;
+        justify-content: center; /* Centra el contenido */
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+    /*agregado nuevo*/
+    .carousel-item {
+        flex: 1 0 100%;
+        position: relative;
+    }
+    .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .carousel-item {
+        flex: 1 0 100%; /* Cada item ocupa todo el ancho del contenedor */
+    }
+    
+    
+    @media (max-width: 768px) {
+        #carousel-container {
+            margin-bottom: 1px; /* Espacio menor en móviles */
+            margin: 5% auto;
+        }
+    
+        .ContenedorImagenes {
+            padding: 10; 
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+    /* Estilos generales de los botones */
+button {
+    padding: 12px 24px; /* Tamaño general */
+    font-size: 16px;
+}
+
+
+
+
+    /* Estilo del footer */
+footer {
+    background-color: #f8ead9; /* Color suave para el fondo del footer (ajusta según tus necesidades) */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto en el footer */
+}
+
+
+/* Estilo para el contenedor de contactos */
+#Contactos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los íconos */
+    margin-top: 10px;
+}
+
+/* Tamaño uniforme para los íconos */
+.iconoRedSocial img {
+    width: 50px; /* Tamaño uniforme para los íconos */
+    height: 50px; /* Mantiene la relación de aspecto */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.iconoRedSocial img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del texto del footer */
+footer p {
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina márgenes innecesarios */
+}
+
+
+    /*color de fondo de la barra de navegacion*/
+    .container-fluid{
+        background-color:white !important;
+    }
+
+    /* Color de los enlaces en la barra de navegación */
+    .navbar-dark .navbar-nav .nav-link {
+        color: #000000; /* Cambia el color de los enlaces a negro */
+    }
+
+    /* Cambia el color en hover */
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: rgba(216, 87, 27, 0.933); /* Cambia a un color (naranja) cuando pasas el ratón */
+    }
+    /* Cambiar el color de fondo del botón de navbar-toggler */
+    .navbar-toggler {
+        background-color: #f1be49 !important; /* Cambia a tu color preferido */
+        border-color: #317039 !important; /* Cambia el borde si es necesario */
+    }
+
+    /* Cambiar el color del icono de hamburguesa */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+    /*lupa*/
+    .icon-lupa {
+        width: 50px;  /* Ajusta el tamaño a tu preferencia */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-left: 10px; /* Espacio a la izquierda */
+        margin-right: 10px; /* Espacio a la derecha */
+        cursor: pointer; /* Cambia el cursor al pasar sobre la lupa */
+    }
+    #separador {
+        height: 2px; /* Ajusta el grosor deseado */
+        background-color: rgba(8, 8, 8, 0.5); /* Color de la sombra oscura */
+        margin: 0; /* Elimina márgenes */
+        border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
+    }
+    /*estilo para las imagenes*/
+
+/* Estilo principal */
+.main-content {
+    text-align: center;
+    margin: 20px auto;
+    width: 75%; /* Más flexible para pantallas pequeñas */
+}
+
+/* Estilo para los títulos */
+.main-content h1,
+.main-content h2 {
+   /* Reducir margen en encabezados */
+    position:relative;
+    margin-top: 0.5px; /* Ajusta a tu gusto */
+    margin-bottom: 0.5px;
+    bottom: -25px;
+}
+
+/* Reducir margen de imágenes o secciones */
+.section {
+    padding: 0.5px 0; /* Reduce el espacio dentro de cada sección */
+    margin: 0.5px 0; /* Reduce el espacio entre las secciones */
+}
+
+
+
+/* Contenedor de la cuadrícula de imágenes */
+.ContenedorImagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Contenedores individuales (Contenedor1 y Contenedor2) */
+#Contenedor1,
+#Contenedor2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
+    max-width: 250px; /* Controla el ancho del contenedor */
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+    #Contenedor1,
+    #Contenedor2 {
+        max-width: 300px; /* Ancho mayor para pantallas grandes */
+    }
+}
+
+/* Estilo para las imágenes */
+.ContenedorImagenes img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    
+    box-sizing: border-box; /* Incluye el borde en las dimensiones totales */
+}
+
+/* Estilos específicos para pantallas móviles */
+@media (max-width: 768px) {
+    .ContenedorImagenes {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+
+      
+    }
+
+    #Contenedor1,
+    #Contenedor2 {
+        max-width: 100%; /* El contenedor ocupa todo el ancho */
+    }
+
+}
+
+
+
+
+/* Hover con zoom */
+.ContenedorImagenes img:hover {
+    transform: scale(1.05); /* Aumenta un poco al pasar el ratón */
+}
+
+
+
+
+/*estilos esécificos para safary apple*/
+
+@media (max-widt: 768px){
+    body{
+        font-size: 12px;
+    }
+
+}
+
+/*configuraciones para pantallas moviles*/
+@media (max-width: 768px) {
+    #TituloL {
+        font-size: 1rem; /* Reduce aún más el tamaño en pantallas pequeñas */
+    }
+
+    #TituloL img {
+        width: 250px; /* Ajusta el ancho para pantallas pequeñas */
+    }
+}
+/*nota para mi si quiero volver a como estaba solo elimina lo nuevo agregado*/
+
+/*hover de color blanco*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+/*estilos preferentes para el footer*/
+/* Estilos CSS */
+.iconoRedSocial {
+    position: relative;
+}
+
+.whatsapp-container {
+    position: relative;
+    display: inline-block;
+}
+
+.whatsapp-number {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white; /* Color del texto */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-container:hover .whatsapp-number {
+    display: block;
+}
+   /*css para boton flotante de whatsap*/
+   
+/* Estilos generales para el ícono de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Espacio desde abajo */
+    right: 20px; /* Espacio desde la derecha */
+    z-index: 1000; /* Para asegurarse de que esté visible */
+}
+
+.whatsapp-float a img {
+    width: 60px; /* Tamaño estándar en pantallas grandes */
+    height: 60px;
+    border-radius: 50%; /* Ícono circular */
+    box-shadow: 0 12px 24px rgba(0, 0, 8, 0.9); /* Sombra más notable */
+    transition: transform 0.3s ease; /* Efecto de zoom al pasar el cursor */
+}
+
+
+.whatsapp-float a img:hover {
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el cursor */
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-float a img {
+        width: 40px; /* Tamaño reducido para móviles */
+        height: 40px;
+        bottom: 15px; /* Ajuste*/
+
+    }
+}

@@ -1,0 +1,29 @@
+# Habilitar enlaces simbólicos
+Options +FollowSymLinks
+
+# Habilitar motor de reescritura
+RewriteEngine On
+
+# Redirigir todas las solicitudes a index.html si el archivo o directorio solicitado no existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Manejar errores 403 y 404
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+# Protección básica para el archivo enviar.php
+<Files "enviar.php">
+    Require all granted
+</Files>
+
+# Procesar archivos PHP correctamente
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Permitir solicitudes CORS desde cualquier origen
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

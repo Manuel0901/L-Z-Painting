@@ -1,0 +1,97 @@
+/* Estilo para el formulario */
+.Formulario {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f8edd9; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 5px 30px 25px 10px gray; /* Sombra sutil */
+}
+
+/* Estilo para los elementos del formulario */
+.Formulario .form-group {
+    margin-bottom: 15px; /* Espaciado entre los grupos de formulario */
+}
+
+.Formulario label {
+    font-weight: bold; /* Hacemos que las etiquetas sean negritas */
+    display: block; /* Aseguramos que la etiqueta ocupe toda la línea */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.Formulario input[type="text"],
+.Formulario input[type="tel"],
+.Formulario input[type="email"],
+.Formulario textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluimos el padding en el ancho total */
+}
+
+/* Estilo para el botón */
+.Formulario button {
+    background-color: #316be7; /* Color terracota para el botón */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.Formulario button:hover {
+    background-color: #349ebe; /* Color más oscuro al pasar el mouse */
+}
+
+
+/* Estilos para el mensaje de respuesta */
+#responseMessage {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#responseMessage.success {
+    color: green;
+}
+
+#responseMessage.error {
+    color: red;
+}
+/*hover de color blanco para los botones*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+/*configuraciones moviles para el mapa*/
+/* Contenedor flexible para adaptar el mapa */
+.map-container {
+    position: relative;
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    max-width: 800px; /* Máximo tamaño en pantallas grandes */
+    margin: auto; /* Centrado */
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+}
+
+/* Hace que el iframe ocupe todo el contenedor */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .map-container {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        padding-top: 75%; /* Relación de aspecto más cuadrada */
+    }
+}

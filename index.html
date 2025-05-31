@@ -1,0 +1,195 @@
+        <!--
+    Autor: Jose Manuel Garcia Arevalo.
+    Estatus: Egresado de ingeniería en sistemas.
+    Fecha: **/10/2024
+    Diseños Gráficos: Raul Alberto Zanco
+    -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L&ZPAINTING</title>
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="ArchivozCss/Estilos.css">
+         <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
+        <!-- Agrega Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--icono-->
+        <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+        <!--script para detectar lenguaje de region-->
+        <script>
+            if(navigator.language !== 'en-US');{
+            
+            }
+        </script>
+         <!-- Google tag (gtag.js) control de google analaityc-->
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT3GQ881CS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MT3GQ881CS');
+</script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <!-- Menú de navegación -->
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg" style="background-color: #f8edd9;">
+                <div class="container-fluid">
+                    <div id="nombreEmpresa">
+                        <a href="Index.html">
+                        <img src="RecursosVisuales/logo1.png" alt="Logo de L & Z Painting" />
+                    </a>
+
+                    </div>
+            
+                    <!-- Botón para desplegar el menú, con clase ms-auto para moverlo a la derecha -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <div id="BotonInicio">
+                                <a class="nav-link btn-inicio" href="Index.html">Home</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonServicios">
+                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
+                            </div>
+                            </li>
+                            <div id="BotonGaleria">
+                            <li class="nav-item">
+                                <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonContacto">
+                                <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
+                            </div>
+                            </li>
+                        </ul>
+                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                    </div>
+                </div>
+            </nav>
+            
+            
+
+           <!-- Separador con sombra -->
+<div class="separador"></div>
+         
+<!-- Carrusel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="RecursosVisuales/imagen_central.png" class="img-fluid d-block" alt="Imagen de inicio">
+        </div>
+        <div class="carousel-item">
+            <img src="RecursosVisuales/casa5.jpg" class="img-fluid d-block" alt="Imagen del segundo carrusel">
+        </div>
+        <div class="carousel-item">
+            <img src="RecursosVisuales/casa6.jpg" class="img-fluid d-block" alt="Imagen del segundo carrusel">
+        </div>
+        
+        <div class="carousel-item">
+            <img src="RecursosVisuales/casa2.jpg" class="img-fluid d-block" alt="Imagen de inicio">
+        </div>
+        <div class="carousel-item">
+            <img src="RecursosVisuales/casa7.jpg" class="img-fluid d-block" alt="Imagen de inicio">
+        </div>
+        <div class="carousel-item">
+            <img src="RecursosVisuales/casa8.jpg" class="img-fluid d-block" alt="Imagen de inicio">
+        </div>
+    </div>
+<!--whatap flotante-->
+   
+    <div class="whatsapp-float">
+        <a href="https://wa.me/12066362658" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
+    </div>
+</div>
+
+   
+       <!-- Contenido principal -->
+    <div class="main-content">
+        <div class="ContenedorImagenes">
+            <div id="Contenedor1">
+                <h2>About Us</h2>
+                <a href="QuienesSomos.html">
+                <img src="RecursosVisuales/about_us.png" alt="Colores">
+                  </a>
+                <h2>Services</h2>
+                <a href="Servicios.html">
+                <img src="RecursosVisuales/servicio.png" alt="Servicios">
+            </a>
+            </div>
+            
+            <div id="Contenedor2">
+                <h2>Gallery</h2>
+                <a href="Galeria.html">
+                <img src="RecursosVisuales/galeria.png" alt="Galería">
+            </a>
+                <h2>Contact</h2>
+                <a href="Contacto.html">
+                <img src="RecursosVisuales/contacto.png" alt="Contacto">
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+
+        </header>
+
+         
+          
+            
+                
+            
+
+                </div>
+            </div>
+
+        <!-- Pie de página -->
+         <footer>
+        <p>&copy; R.M(diseños) 2025. All rights reserved.</p>
+        <p>Designer’s Contact Info</p>
+        <div id="Contactos">
+            <div class="iconoRedSocial">
+                <div class="whatsapp-container"> 
+                    <img src="RecursosVisuales/WHATSAPP.png" alt="WhatsApp"> 
+                    <div class="whatsapp-number">+503 7162 5404</div> 
+                </div>
+            </div>
+           
+            
+        </div>
+    </footer>         
+        
+
+        <!-- animacioon del menu amburgesa con JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+    </html>

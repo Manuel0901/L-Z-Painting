@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de menú */
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+/* Estilos para la sección de servicios */
+#servicios {
+    padding: 40px 20px;
+    background-color: #fff;
+   
+}
+
+#servicios h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.servicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 4px rgb(189, 185, 185);
+}
+
+.servicio img.img-servicio {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.servicio h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.servicio p {
+    margin: 0;
+    color: #555;
+}
+
+/* Estilos para otras secciones */
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f8edd9;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 600px) {
+    .servicio {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .servicio img.img-servicio {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+#cer{
+    box-shadow: 5px 10px 10px 10px gray;
+}
+
+/*SECTION*/
+/* Estilo general de la sección de la galería */
+#galeria {
+    text-align: center; /* Centra el texto e imagen */
+    padding: 20px;
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    margin: 20px auto; /* Espaciado superior e inferior */
+    max-width: 90%; /* Ancho máximo para pantallas grandes */
+}
+
+/* Título de la sección */
+#galeria h2 {
+    font-size: 2rem;
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Descripción debajo del título */
+#galeria p {
+    font-size: 1.2rem;
+    color: #666; /* Color gris para el texto */
+    margin-bottom: 20px;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Estilo para la imagen */
+#galeria img {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    max-width: 500px; /* Máximo ancho reducido a 500px */
+    height: auto; /* Mantiene proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados de la imagen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Centra la imagen como un bloque */
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    #galeria h2 {
+        font-size: 1.5rem; /* Reduce tamaño del título */
+    }
+
+    #galeria p {
+        font-size: 1rem; /* Reduce tamaño del texto */
+    }
+
+    #galeria img {
+        max-width: 90%; /* Asegura que la imagen no exceda el contenedor */
+    }
+}
