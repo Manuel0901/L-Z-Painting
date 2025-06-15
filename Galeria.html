@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L&ZPAINTING</title>
 
-  <!-- Tus CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="ArchivozCss/Estilos.css">
   <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
-  <link rel="stylesheet" href="dist/style.css" />
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="ArchivozCss/Flotantewhats.css">
   
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Icono -->
   <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+   <!--fotawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
 
   <!-- JS generado por React/Vite -->
-  <script type="module" crossorigin src="dist/index-Cq2A8aVy.js"></script>
-  <link rel="stylesheet" crossorigin href="ddist/index-DiXdPs1e.css">
+  <script type="module" crossorigin src="dist/index-Bd8e42aK.js"></script>
+  <link rel="stylesheet" crossorigin href="dist/index-BnQGZoN9.css">
 </head>
 
 <body>
@@ -38,40 +43,67 @@
             aria-label="Toggle navigation" style="margin-left: auto;">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <div id="BotonInicio">
-                  <a class="nav-link btn-inicio" href="index.html">Home</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div id="BotonServicios">
-                  <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div id="BotonGaleria">
-                  <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div id="BotonContacto">
-                  <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
-                </div>
-              </li>
-            </ul>
-            <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
-          </div>
+           <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <div id="BotonInicio">
+                               <a class="nav-link btn-inicio" href="Index.html">
+                                <i class="fas fa-home"></i> Home</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonServicios">
+                                <a class="nav-link btn-inicio" href="Servicios.html">
+                                <i class="fas fa-paint-brush"></i> Services</a>
+                            </div>
+                            </li>
+                            <div id="BotonGaleria">
+                            <li class="nav-item">
+                               <a class="nav-link btn-inicio" href="Galeria.html">
+                                <i class="fas fa-eye"></i>Gallery</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonContacto">
+                                <a class="nav-link btn-inicio" href="Contacto.html">
+                                <i class="fas fa-envelope"></i> Contact</a>
+                            </div>
+                            </li>
+                             <li class="nav-item">
+                                <div id="BotonHerramienta">
+                                 <a class="nav-link btn-inicio" href="index.html#guide-section">
+                             <i class="fas fa-compass"></i>  Guide
+                             </a>
+                        </div>
+                    </li>
+                        </ul>
+                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                    </div>
         </div>
       </nav>
       <div class="separador"></div>
          <!-- Contenido principal -->
     <main>
-      <h1>COLORED WINDOWS</h1>
+      <h2 class="subrayado">Colored Windows</h2>
+
       <div id="react-root"></div>
     </main>
+    
     </header>
+      <!-- Botón de WhatsApp -->
+    <!-- Botón de WhatsApp -->
+   <div class="whatsapp-float">
+    <a href="https://wa.me/12066362658" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-icon" />
+        <div class="whatsapp-badge" id="whatsapp-badge">1</div> <!-- Badge rojo -->
+    </a>
+</div>
+    <!-- Notificación -->
+    <div class="whatsapp-notification" id="whatsapp-notification">
+        <div class="notification-badge">1</div>
+        <div class="notification-text">¿Cómo podemos ayudarte?</div>
+        <div class="notification-close" id="close-notification">×</div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -91,5 +123,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="ArchivozJS/Notificacion.js"></script>
 </body>
 </html>

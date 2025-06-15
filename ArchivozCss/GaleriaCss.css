@@ -177,3 +177,21 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+.subrayado {
+  position: relative;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.subrayado::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  background-color: #007bff; /* azul */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  border-radius: 3px;
+}

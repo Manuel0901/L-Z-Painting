@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
     <link rel="stylesheet" href="ArchivozCss/EstiloContacto.css">
     <link rel="stylesheet" href="ArchivozCss/QuienesSomos.css">
+     <!--fotawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <!-- Agrega Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--scripts js-->
@@ -30,48 +34,63 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <div id="BotonInicio">
-                                <a class="nav-link btn-inicio" href="Index.html">Home</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="BotonServicios">
-                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
-                            </div>
-                        </li>
-                        <div id="BotonGaleria">
+                 <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
+                                <div id="BotonInicio">
+                               <a class="nav-link btn-inicio" href="Index.html">
+                                <i class="fas fa-home"></i> Home</a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="BotonContacto">
-                                <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonServicios">
+                                <a class="nav-link btn-inicio" href="Servicios.html">
+                                <i class="fas fa-paint-brush"></i> Services</a>
                             </div>
-                        </li>
-                    </ul>
-                    <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
-                </div>
+                            </li>
+                            <div id="BotonGaleria">
+                            <li class="nav-item">
+                               <a class="nav-link btn-inicio" href="Galeria.html">
+                                <i class="fas fa-eye"></i>Gallery</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonContacto">
+                                <a class="nav-link btn-inicio" href="Contacto.html">
+                                <i class="fas fa-envelope"></i> Contact</a>
+                            </div>
+                            </li>
+                             <li class="nav-item">
+                                <div id="BotonHerramienta">
+                                 <a class="nav-link btn-inicio" href="index.html#guide-section">
+                             <i class="fas fa-compass"></i>  Guide
+                             </a>
+                        </div>
+                    </li>
+                        </ul>
+                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                    </div>
             </div>
         </nav>
 
         <h2>Contact Us</h2>
+        <p>Feel free to reach out to us and get a quote today!</p>
         <div class="Formulario">
             <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                   <input type="text" id="name" name="name" required style="text-align: center;">
+
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required
+       style="text-align: center;" maxlength="15"
+       inputmode="numeric">
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required style="text-align: center;">
                 </div>
                 <div class="form-group">
                     <label for="message">Questions / Description:</label>
@@ -88,12 +107,6 @@
             <div id="responseMessage"></div>
         </div>
     </header>
-    <div class="whatsapp-float">
-        <a href="https://wa.me/12066362658" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-        </a>
-        
-    </div>
     
                   <h2 style="text-align: center;">Areas We Cover</h2>
 <div class="map-container">
@@ -123,6 +136,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="ArchivozJS/ContactoFetch.js"></script>
+    <script src="ArchivozJS/Contacto.js"></script>
    
     
 </body>

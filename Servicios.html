@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="ArchivozCss/Estilos.css">
     <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
     <link rel="stylesheet" href="ArchivozCss/ServiciosCss.css">
+    <link rel="stylesheet" href="ArchivozCss/Flotantewhats.css">
     <!-- Agrega Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!--fotawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <!-- icono -->
     <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
 </head>
@@ -28,106 +33,211 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <div id="BotonInicio">
-                                <a class="nav-link btn-inicio" href="Index.html">Home</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="BotonServicios">
-                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
-                            </div>
-                        </li>
-                        <div id="BotonGaleria">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
+                                <div id="BotonInicio">
+                               <a class="nav-link btn-inicio" href="Index.html">
+                                <i class="fas fa-home"></i> Home</a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="BotonContacto">
-                                <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonServicios">
+                                <a class="nav-link btn-inicio" href="Servicios.html">
+                                <i class="fas fa-paint-brush"></i> Services</a>
                             </div>
-                        </li>
-                    </ul>
-                    <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
-                </div>
+                            </li>
+                            <div id="BotonGaleria">
+                            <li class="nav-item">
+                               <a class="nav-link btn-inicio" href="Galeria.html">
+                                <i class="fas fa-eye"></i>Gallery</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonContacto">
+                                <a class="nav-link btn-inicio" href="Contacto.html">
+                                <i class="fas fa-envelope"></i> Contact</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonHerramienta">
+                                 <a class="nav-link btn-inicio" href="index.html#guide-section">
+                             <i class="fas fa-compass"></i>  Guide
+                             </a>
+                        </div>
+                    </li>
+                        </ul>
+                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                    </div>
             </div>
+
         </nav>
 
-        
+                  <!-- Separador con sombra -->
+<div class="separador"></div>
     <main>
     <section id="servicios">
         <h2>Services Offered</h2>
-        <div class="servicio">
-            <img src="RecursosVisuales/casa6.jpg" alt="Interior Painting" class="img-servicio">
-            <h3>Interior Painting</h3><br>
-            <p>"Transform the interior of your home with vibrant colors and professional finishes.
-                 We ensure every detail reflects your style and personality."</p>
-        </div>
-        <div class="servicio">
-            <img src="RecursosVisuales/image00011.jpeg" alt="Exterior Painting" class="img-servicio">
-            <h3>Exterior Painting</h3>
-            <p>"Protect and enhance the exterior of your property with durable, weather-resistant paint.
-                 We offer a wide variety of colors and finishes for a flawless look."</p>
-        </div>
-        <div class="servicio">
-            <img src="RecursosVisuales/casa6.jpg" alt="Decor and Murals" class="img-servicio">
-            <h3>Decor and Murals</h3>
-            <p>"Add an artistic touch to your spaces with custom murals
-                 and unique decorations that reflect your vision and creativity."</p>
-        </div>
-        <div class="servicio">
-            <img src="RecursosVisuales/casa4.jpg" alt="Repair and Maintenance" class="img-servicio">
-            <h3>Repair and Maintenance</h3>
-            <p>"Restore the beauty of your surfaces with our repair and maintenance services.
-                 Perfect for damaged walls, cracks, and worn-out paint."</p>
-        </div>
-    </section>
+        <div class="tech-product-grid">
+            <!-- Servicio 1 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/pinturaexterior.png" alt="Interior Painting" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Interior Painting</h3>
+                    <p class="tech-desc">Transform the interior of your home with vibrant colors and professional finishes. We ensure every detail reflects your style and personality.</p>
+                    <a href="QuienesSomos.html" class="tech-button">
+                        Get to know us<i class="fas fa-brush"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Servicio 2 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/exterior.png" alt="Exterior Painting" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Exterior Painting</h3>
+                    <p class="tech-desc">Protect and enhance the exterior of your property with durable, weather-resistant paint. We offer a wide variety of colors and finishes.</p>
+                    <a href="index.html" class="tech-button">
+            check out our homepage <i class="fas fa-home"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Servicio 3 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/mural.png" alt="Decor and Murals" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Decor and Murals</h3>
+                    <p class="tech-desc">Add an artistic touch to your spaces with custom murals and unique decorations that reflect your vision and creativity.</p>
+                    <a href="Galeria.html" class="tech-button">
+                        our gallery<i class="fas fa-palette"></i>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Servicio 4 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/reparacion.png" alt="Repair and Maintenance" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Repair and Maintenance</h3>
+                    <p class="tech-desc">Restore the beauty of your surfaces with our repair and maintenance services. Perfect for damaged walls, cracks, and worn-out paint.</p>
+                    <a href="index.html#guide-section" class="tech-button">
+                        Learn more <i class="fas fa-compass"></i>
+                    </a>
+                </div>
+            </div>
 
-    <section id="galeria">
-        <h2>Project Gallery</h2>
-        <p>"Explore some of our featured projects and see how we've transformed
-             homes and businesses with our professional work.
-            Get inspired for your next project!"</p>
-        <!-- Images and testimonials -->
-         <img src="RecursosVisuales/casa2.jpg">
-    </section>
-
-    <section id="galeria">
-        <h2>Work Process</h2>
-        <p>"Our process begins with a personalized assessment to understand your needs,
-             followed by detailed planning and execution with the highest quality standards.
-             We guarantee a flawless result in every project."</p>
-        <!-- Description of the process -->
-        <img src="RecursosVisuales/casa2.jpg">
-    </section>
-
-    <section id="precios">
-        <h2>Packages and Pricing</h2>
-        <p>"Discover our packages designed to suit your needs and budget.
-             From basic services to comprehensive solutions,
-             we have the perfect option for you."</p>
-        <p>Contact us through the means provided on our website.</p>
-        <!-- Pricing and package information -->
+               <!-- Servicio 5 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/texturizado.png" alt="Repair and Maintenance" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Application of Textured and Decorative Finishes</h3>
+                    <p class="tech-desc">High-quality textured and decorative finishes. We transform spaces with unique, long-lasting designs.</p>
+                    <a href="#Comprometidos" class="tech-button">
+                        committed <i class="fas fa-star"></i>
+                    </a>
+                </div>
+            </div>
+               <!-- Servicio 6 -->
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <div class="tech-icon">
+                        <img src="RecursosVisuales/impermeabilizacion.png" alt="Repair and Maintenance" class="img-servicio">
+                    </div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-card-content">
+                    <h3 class="tech-title">Waterproofing and Surface Protection</h3>
+                    <p class="tech-desc">Waterproofing and surface protection using high-performance materials. 
+                        Guaranteed durability against water, humidity, and environmental damage.</p>
+                    <a href="Contacto.html" class="tech-button">
+                     Contact us    <i class="fas fa-phone-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+       
     </section>
 </main>
 
     </header>
+              <!-- Separador con sombra -->
+<section class="separator-band">
+        <div class="separator-content">
+            <h2 id="Comprometidos" class="Comprometidos">Working for You</h2>
+            <p>Attention to detail is our priority.</p>
+        </div>
+    </section>
+      
+    <!-- Agrega un contenedor para el efecto -->
+ <div class="parallax-container">
+        <div class="parallax-background"></div>
+        <div class="parallax-content">
+            <div id="seccion2" class="seccion2">
+                <div class="seccion2-text">
+                    <h2>We're committed to meeting your needs.</h2>
+                </div>
+                <div id="seccion-imagen">
+                    <img src="RecursosVisuales/casa1.jpg" alt="Proyecto de pintura">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/12066362658" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-        </a>
-        
+     <div class="parallax-container">
+        <div class="parallax-background"></div>
+        <div class="parallax-content">
+            <div id="seccion3" class="seccion3">
+                <div class="seccion3-text">
+                </div>
+                <div id="seccion-imagen">
+                    <img src="RecursosVisuales/casa6.jpg" alt="Proyecto de pintura">
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- Botón de WhatsApp -->
+   <div class="whatsapp-float">
+    <a href="https://wa.me/12066362658" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-icon" />
+        <div class="whatsapp-badge" id="whatsapp-badge">1</div> <!-- Badge rojo -->
+    </a>
+</div>
+    <!-- Notificación -->
+    <div class="whatsapp-notification" id="whatsapp-notification">
+        <div class="notification-badge">1</div>
+        <div class="notification-text">¿Cómo podemos ayudarte?</div>
+        <div class="notification-close" id="close-notification">×</div>
     </div>
 
     <!--whatap flotante-->
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-          <!-- Pie de página -->
+    <script src="ArchivozJS/Notificacion.js"></script>
           <footer>
         <p>&copy; R.M(diseños) 2025. All rights reserved.</p>
         <p>Designer’s Contact Info</p>
@@ -142,5 +252,7 @@
             
         </div>
     </footer>    
+     <!--scrips-->
+     <script src="ArchivozJS/Notificacion.js"></script>
 </body>
 </html>

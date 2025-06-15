@@ -1,160 +1,416 @@
-/* Estilos generales */
+:root {
+  --primary-tech: #00a1ff;
+  --secondary-tech: #0066ff;
+  --dark-tech: #0f172a;
+  --light-tech: #f8fafc;
+  --text-primary: #e2e8f0; /* Texto más legible */
+  --text-secondary: #94a3b8; /* Texto secundario */
+  --glow-tech: rgba(0, 180, 255, 0.6);
+}
+
+/* Estilos base mejorados para legibilidad */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  background-color: var(--dark-tech);
+  color: var(--text-primary); /* Color de texto más contrastante */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
 }
 
-/* Estilos para la barra de menú */
-.navbar {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: #333;
-    font-weight: bold;
+h2 {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--primary-tech), var(--secondary-tech));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: black;
+  position: relative;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-tech), transparent);
+}
+
+/* Grid de tarjetas tecnológicas */
+.tech-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+/* Tarjetas futuristas */
+.tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+   background: rgba(255, 255, 255, 0.03); /* Fondo más oscuro */
+  z-index: 1;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--glow-tech), rgba(0, 80, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 150, 255, 0.4);
+  border-color: rgba(0, 150, 255, 0.3);
+}
+
+/* Encabezado de tarjeta */
+.tech-card-header {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tech-card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tech-card:hover .tech-card-header img {
+  transform: scale(1.1);
+}
+
+.tech-glow {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, var(--glow-tech), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.tech-card:hover .tech-glow {
+  opacity: 0.6;
+}
+
+/* Contenido de tarjeta mejorado */
+.tech-card-content {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+  background: rgba(15, 23, 42, 0.7); /* Fondo semitransparente para mejor legibilidad */
+  backdrop-filter: blur(5px);
+  border-radius: 0 0 16px 16px;
+}
+
+.tech-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--light-tech); /* Blanco puro para títulos */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tech-desc {
+  color: var(--text-secondary); /* Color más claro para descripciones */
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7; /* Más espacio entre líneas */
+  font-weight: 400;
+}
+
+/* Botón tecnológico */
+.tech-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, var(--primary-tech), var(--secondary-tech));
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.tech-button:hover {
+  background: linear-gradient(45deg, var(--secondary-tech), var(--primary-tech));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 120, 255, 0.4);
+}
+
+.tech-button:hover::before {
+  left: 100%;
+}
+
+.tech-button i {
+  transition: transform 0.3s;
+}
+
+.tech-button:hover i {
+  transform: translateX(3px);
+}
+
+/* Efectos de partículas (opcional) */
+.tech-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+}
+/*estilos de la seccion 2*/
+.seccion2 {
+  max-width: 1200px;
+            margin: 4rem auto;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .seccion2-text {
+            margin-bottom: 2.5rem;
+            padding: 0 1.5rem;
+            animation: fadeInDown 0.8s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #seccion-imagen {
+            width: 85%;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(0, 0, 0, 0.03);
+            position: relative;
+            animation: scaleIn 1s both 0.3s;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #seccion-imagen img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #seccion-imagen:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Estilo para el título */
+        .seccion2 h2 {
+            color: #f8ead9;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .seccion2 h2::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #ecc94b, transparent);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 3px;
+        }
+
+        /* EFECTO PARALLAX FUNCIONAL */
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        .parallax-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover fixed;
+            z-index: 1;
+            transform: translateZ(0);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .seccion2 h2 {
+                font-size: 2.2rem;
+            }
+            
+            #seccion-imagen {
+                width: 95%;
+            }
+        }
+        /*para la banda*/
+        /* ELEGANT SEPARATOR BAND */
+.separator-band {
+    background: linear-gradient(135deg, #2a4365 0%, #1a365d 100%);
     color: white;
-}
-
-/* Estilos para la sección de servicios */
-#servicios {
-    padding: 40px 20px;
-    background-color: #fff;
-   
-}
-
-#servicios h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #333;
-}
-
-.servicio {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0px 2px 2px 4px rgb(189, 185, 185);
-}
-
-.servicio img.img-servicio {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.servicio h3 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #007bff;
-}
-
-.servicio p {
-    margin: 0;
-    color: #555;
-}
-
-/* Estilos para otras secciones */
-section {
-    padding: 40px 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #333;
-}
-
-/* Estilos para el footer */
-footer {
-    background-color: #f8edd9;
-    padding: 20px 0;
+    padding: 4rem 2rem;
     text-align: center;
-    color: #333;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin: 5rem 0;
+    width: 100%;
 }
 
-/* Estilos para pantallas móviles */
-@media (max-width: 600px) {
-    .servicio {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .servicio img.img-servicio {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
+.separator-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
-#cer{
-    box-shadow: 5px 10px 10px 10px gray;
+.separator-band h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/*SECTION*/
-/* Estilo general de la sección de la galería */
-#galeria {
-    text-align: center; /* Centra el texto e imagen */
-    padding: 20px;
-    background-color: #f9f9f9; /* Color de fondo suave */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    margin: 20px auto; /* Espaciado superior e inferior */
-    max-width: 90%; /* Ancho máximo para pantallas grandes */
+.separator-band h2::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #ecc94b, #f6ad55);
+    bottom: -10px;
+    left: 20%;
+    border-radius: 3px;
 }
 
-/* Título de la sección */
-#galeria h2 {
-    font-size: 2rem;
-    color: #333; /* Color del texto */
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
-}
-
-/* Descripción debajo del título */
-#galeria p {
+.separator-band p {
     font-size: 1.2rem;
-    color: #666; /* Color gris para el texto */
-    margin-bottom: 20px;
-    font-family: 'Verdana', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
 }
 
-/* Estilo para la imagen */
-#galeria img {
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
-    max-width: 500px; /* Máximo ancho reducido a 500px */
-    height: auto; /* Mantiene proporción de la imagen */
-    border-radius: 10px; /* Bordes redondeados de la imagen */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
-    margin: 0 auto; /* Centra la imagen */
-    display: block; /* Centra la imagen como un bloque */
+/* Decorative Effects */
+.separator-band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(236, 201, 75, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(236, 201, 75, 0.1) 0%, transparent 40%);
 }
 
-/* Estilo responsivo para pantallas pequeñas */
+.separator-band::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #ecc94b, #f6ad55);
+}
+
+
+/* Optional Background Image Version */
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    #galeria h2 {
-        font-size: 1.5rem; /* Reduce tamaño del título */
+    .separator-band h2 {
+        font-size: 2.5rem;
     }
-
-    #galeria p {
-        font-size: 1rem; /* Reduce tamaño del texto */
-    }
-
-    #galeria img {
-        max-width: 90%; /* Asegura que la imagen no exceda el contenedor */
+    
+    .separator-band {
+        padding: 3rem 1.5rem;
     }
 }

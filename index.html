@@ -15,10 +15,16 @@
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="ArchivozCss/Estilos.css">
          <link rel="stylesheet" href="ArchivozCss/HeaderCss.css">
+         <link rel="stylesheet" href="ArchivozCss/Guia.css">
+          <link rel="stylesheet" href="ArchivozCss/Flotantewhats.css">
         <!-- Agrega Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!--icono-->
         <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+        <!--fotawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
         <!--script para detectar lenguaje de region-->
         <script>
             if(navigator.language !== 'en-US');{
@@ -42,7 +48,6 @@
 
         <header>
             <!-- Menú de navegación -->
-            <!-- Barra de navegación -->
             <nav class="navbar navbar-expand-lg" style="background-color: #f8edd9;">
                 <div class="container-fluid">
                     <div id="nombreEmpresa">
@@ -61,24 +66,36 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <div id="BotonInicio">
-                                <a class="nav-link btn-inicio" href="Index.html">Home</a>
+                               <a class="nav-link btn-inicio" href="Index.html">
+                                <i class="fas fa-home"></i> Home</a>
                             </div>
                             </li>
                             <li class="nav-item">
                                 <div id="BotonServicios">
-                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
+                                <a class="nav-link btn-inicio" href="Servicios.html">
+                                <i class="fas fa-paint-brush"></i> Services</a>
                             </div>
                             </li>
                             <div id="BotonGaleria">
                             <li class="nav-item">
-                                <a class="nav-link btn-galeria" href="Galeria.html">Gallery</a>
+                               <a class="nav-link btn-inicio" href="Galeria.html">
+                                <i class="fas fa-eye"></i>Gallery</a>
                             </div>
                             </li>
                             <li class="nav-item">
                                 <div id="BotonContacto">
-                                <a class="nav-link btn-contacto" href="Contacto.html">Contact</a>
+                                <a class="nav-link btn-inicio" href="Contacto.html">
+                                <i class="fas fa-envelope"></i> Contact</a>
                             </div>
                             </li>
+                           <li class="nav-item">
+                                <div id="BotonHerramienta">
+                                 <a class="nav-link btn-inicio" href="#guide-section">
+                             <i class="fas fa-compass"></i>  Guide
+                             </a>
+                        </div>
+                    </li>
+
                         </ul>
                         <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
                     </div>
@@ -113,14 +130,22 @@
             <img src="RecursosVisuales/casa8.jpg" class="img-fluid d-block" alt="Imagen de inicio">
         </div>
     </div>
-<!--whatap flotante-->
+ 
+
    
-    <div class="whatsapp-float">
-        <a href="https://wa.me/12066362658" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-        </a>
-    </div>
+      <!-- Botón de WhatsApp -->
+   <div class="whatsapp-float">
+    <a href="https://wa.me/12066362658" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-icon" />
+        <div class="whatsapp-badge" id="whatsapp-badge">1</div> <!-- Badge rojo -->
+    </a>
 </div>
+    <!-- Notificación -->
+    <div class="whatsapp-notification" id="whatsapp-notification">
+        <div class="notification-badge">1</div>
+        <div class="notification-text">¿Cómo podemos ayudarte?</div>
+        <div class="notification-close" id="close-notification">×</div>
+    </div>
 
    
        <!-- Contenido principal -->
@@ -160,15 +185,68 @@
 </button>
 
         </header>
-
          
-          
-            
-                
-            
-
-                </div>
+          </div>
             </div>
+              <!--contenido de la seccion guia-->
+      <section class="guide-section" id="guide-section">
+        <h2>House Painting Guide</h2>
+        <div class="cards-container">
+            <!-- Tarjeta 1 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Why Paint Your Home?</h3>
+                <p>Painting your home not only improves its appearance but also protects surfaces from the elements, prevents moisture, and increases property value.</p>
+            </div>
+            
+            <!-- Tarjeta 2 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>How Does Water Damage Your Home if It's Not Painted?</h3>
+                <p>Water can seep into porous materials, causing dampness, mold, structural decay, and rust on metals. A good paint acts as a protective barrier.</p>
+            </div>
+            
+            <!-- Tarjeta 3 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-oil-can"></i>
+                </div>
+                <h3>Where to Use Oil-Based Paint?</h3>
+                <p>Ideal for metal surfaces (gates, doors), exposed wood (outdoor furniture, windows), and high-traffic areas. It resists moisture and wear better.</p>
+            </div>
+            
+            <!-- Tarjeta 4 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-brush"></i>
+                </div>
+                <h3>PSurface Preparation</h3>
+                <p>Clean, sand, and repair cracks before painting. Apply sealer or primer for better adhesion. Good preparation ensures a long-lasting finish.</p>
+            </div>
+            
+            <!-- Tarjeta 5 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <h3>Choosing the Right Color</h3>
+                <p>Consider natural lighting, room size, and color psychology. Light tones make spaces look larger, while dark tones add warmth but visually shrink the area.</p>
+            </div>
+            
+            <!-- Tarjeta 6 -->
+            <div class="paint-card">
+                <div class="card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>When to Repaint?</h3>
+                <p>Check every 3–5 years for exteriors and 5–7 for interiors. Signs: peeling, fading, moisture stains, or when the color no longer suits your style.</p>
+            </div>
+        </div>
+    </section>
 
         <!-- Pie de página -->
          <footer>
@@ -189,6 +267,8 @@
 
         <!-- animacioon del menu amburgesa con JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="ArchivozJS/Guia.js"></script>
+         <script src="ArchivozJS/Notificacion.js"></script>
 
     </body>
 

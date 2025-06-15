@@ -1,92 +1,122 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: white;
-}
-
-.navbar {
-    background-color: #f8edd9;
-}
-
-#parrafo {
-    padding: 20px;
-}
-
-#parrafo h1, #parrafo h2 {
-    text-align: center;
-}
-
-#parrafo img {
-    display: block;
-    margin: 0 auto;
-}
-
-#parrafo p {
-    text-align: justify;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
-
-    .navbar-toggler {
-        margin-left: auto;
-    }
-
-    #parrafo {
-        padding: 10px;
-    }
-
-    #parrafo h1, #parrafo h2 {
-        font-size: 24px;
-    }
-
-    #parrafo p {
-        font-size: 16px;
-    }
-
-    #parrafo img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-/* Estilo general para la sección de "Quiénes somos" */
 .quienes-somos {
-    padding: 20px; /* Espaciado interno */
-    margin: 20px; /* Espaciado externo */
-    border-style: hidden;
-    color: rgb(14, 13, 13); /* Color del texto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 12px 30px rgba(0.6, 219, 9,198); /* Sombra sutil para el efecto de profundidad */
-    width: 80%; /* Ajusta el ancho según sea necesario */
-    max-width: 600px; /* Ancho máximo para que no se estire demasiado */
-    margin-left: auto;
-    margin-right: auto; /* Centra el cuadro */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* Estilo para los párrafos dentro de la sección */
-.quienes-somos p {
-    font-size: 18px; /* Tamaño de la fuente */
-    line-height: 1.6; /* Espaciado entre líneas */
-    text-align: justify; /* Justifica el texto */
+h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
 }
 
-/* Asegura que sea responsive */
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto;
+}
+
+.contenedor-parrafo {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.texto {
+    flex: 1;
+    padding: 2rem;
+}
+
+.imagen {
+    flex: 1;
+    min-height: 300px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.imagen:hover img {
+    transform: scale(1.05);
+}
+/* SOMBRAS COLOREDAS CON PRESENCIA (pero no agresivas) */
+/* 1. Who We Are - Amarillo #f1be49 */
+.contenedor-parrafo:nth-child(2) {
+    box-shadow: 0 4px 18px rgba(241, 226, 14, 0.466);
+}
+
+/* 2. Our Mission - Verde #317039 */
+.contenedor-parrafo:nth-child(4) {
+    box-shadow: 0 4px 18px rgba(3, 243, 35, 0.452);
+}
+
+/* 3. Our Values - Beige #f8ead9 */
+.contenedor-parrafo:nth-child(6) {
+    box-shadow: 0 4px 18px rgba(224, 17, 10, 0.473);
+}
+
+/* 4. Our Commitment - Naranja #db4b09 */
+.contenedor-parrafo:nth-child(8) {
+    box-shadow: 0 4px 18px rgba(241, 226, 14, 0.466);
+}
+
+/* Efecto hover con más personalidad */
+.contenedor-parrafo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(3, 99, 243, 0.452);
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
-    .quienes-somos {
-        width: 90%; /* Ajusta el ancho para pantallas móviles */
+    .contenedor-parrafo, .reverse {
+        flex-direction: column;
     }
+    
+    .imagen {
+        width: 100%;
+    }
+}
+
+/*para las letras*/
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333; /* Opcional: mejora contraste */
+   font-weight: 700; /* Negrita */
 }
